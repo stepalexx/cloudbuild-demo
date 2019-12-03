@@ -1,5 +1,17 @@
 steps:
 
+# INSTALL
+- name: node:12-alpine
+  entrypoint: npm
+  args: ['install']
+
+# Test step
+- name: node:12-alpine
+  entrypoint: npm
+  args: ['test']
+
+
+
 # CONTAINERIZE: containerize the application
 - name: gcr.io/cloud-builders/docker
   entrypoint: docker
